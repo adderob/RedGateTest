@@ -11,3 +11,5 @@ CREATE TABLE [dbo].[MarketProduct]
 GO
 ALTER TABLE [dbo].[MarketProduct] ADD CONSTRAINT [PK_MarketProduct] PRIMARY KEY CLUSTERED ([Id]) ON [PRIMARY]
 GO
+ALTER TABLE [dbo].[MarketProduct] ADD CONSTRAINT [FK_MarketProduct_Market] FOREIGN KEY ([MarketId]) REFERENCES [dbo].[Market] ([Id])
+GO
